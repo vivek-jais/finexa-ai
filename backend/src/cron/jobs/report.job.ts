@@ -17,6 +17,9 @@ export const processReportJob = async () => {
 //Get Last Month because this will run on the first of the month
   const from = startOfMonth(subMonths(now, 1));
   const to = endOfMonth(subMonths(now, 1));
+//   const from = new Date("2026-10-10T18:30:00.000Z");
+// const to = new Date("2026-11-30T18:29:59.999Z");
+  
 
   console.log("From Date",from , "to date",to);
   
@@ -65,7 +68,7 @@ export const processReportJob = async () => {
             });
             emailSent = true;
           } catch (error) {
-            console.log(`Email failed for ${user.id}`);
+            console.error(`Email failed for ${user.id}`, error);
           }
         }
 
