@@ -26,6 +26,10 @@ const userSchema = new Schema<UserDocument>({
         unique:true,
         lowercase:true
     },
+    profilePicture:{
+        type: String,
+        default: null
+    },
     password:{
          type:String,
         required:true,
