@@ -3,7 +3,7 @@ import {
   PaymentMethodEnum,
   RecurringIntervalEnum,
   TransactionTypeEnum,
-} from "../models/transaction.madel";
+} from "../models/transaction.model";
 
 
 

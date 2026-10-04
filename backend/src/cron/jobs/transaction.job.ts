@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import TransactionModel from "../../models/transaction.madel";
+import TransactionModel from "../../models/transaction.model";
 import { calculateNextOccurrence } from "../../utils/helper";
 
 export const processRecurrigTransactions = async () => {

@@ -1,4 +1,4 @@
-import { PaymentMethodEnum } from "../models/transaction.madel";
+import { PaymentMethodEnum } from "../models/transaction.model";
 
 export const receiptPrompt = `
 You are a financial assistant that helps users analyze and extract transaction details from receipt image (base64 encoded)

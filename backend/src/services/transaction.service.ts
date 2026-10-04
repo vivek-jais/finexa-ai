@@ -1,5 +1,5 @@
 import { brotliCompressSync } from "zlib";
-import TransactionModel, { TransactionTypeEnum } from "../models/transaction.madel";
+import TransactionModel, { TransactionTypeEnum } from "../models/transaction.model";
 import { calculateNextOccurrence, calculateNextReportDate } from "../utils/helper";
 import { BulkDeleteTransactionType, CreateTransactionType, transactionIdSchema, UpdateTransactionType } from "../validators/transaction.validator";
 import { BadRequestException, NotFoundException } from "../utils/app-error";

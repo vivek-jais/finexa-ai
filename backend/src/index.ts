@@ -11,11 +11,13 @@ import { asyncHandler } from "./middlewares/asyncHandler.middleware";
 import connectDatabase from "./config/database.config";
 import authRoutes from "./routes/auth.route";
 import userRoutes from "./routes/user.route";
+import analyticsRoutes from "./routes/analytics.route"
 import { passportAuthenticateJwt } from "./config/passport.config";
 import transactionRoutes from "./routes/transaction.route";
 import { initializeCorns } from "./cron";
 import reportRoutes from "./routes/report.route";
 import { calculateNextReportDate } from "./utils/helper";
+import { getDateRange } from "./utils/date";
 
 
 const app = express();
@@ -50,8 +52,11 @@ app.use(`/auth`, authRoutes);
 app.use('/user' ,passportAuthenticateJwt, userRoutes);
 app.use('/transaction',passportAuthenticateJwt,transactionRoutes);
 app.use('/report',passportAuthenticateJwt,reportRoutes);
+app.use(`/analytics`, passportAuthenticateJwt, analyticsRoutes);
 
 app.use(errorHandler);
+
+// getDateRange("30days");
 
 app.listen(Env.PORT, async () => {
   await connectDatabase();

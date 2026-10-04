@@ -5,7 +5,7 @@ import ReportSettingModel, {
 import ReportModel from "../models/report.model";
 import TransactionModel, {
   TransactionTypeEnum,
-} from "../models/transaction.madel";
+} from "../models/transaction.model";
 import { NotFoundException } from "../utils/app-error";
 import { calculateNextReportDate } from "../utils/helper";
 import { UpdateReportSettingType } from "../validators/report.validator";
